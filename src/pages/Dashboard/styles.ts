@@ -21,6 +21,26 @@ export const CardContainer = styled.section`
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 32px;
   margin-top: -150px;
+
+  @media (max-width: 1000px) {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+
+    > div {
+      width: 46%;
+    }
+
+    > div + div + div {
+    }
+  }
+
+  @media (max-width: 700px) {
+    > div {
+      width: 100%;
+    }
+  }
 `;
 
 export const Card = styled.div`
@@ -91,5 +111,9 @@ export const TableContainer = styled.section`
     td:last-child {
       border-radius: 0 8px 8px 0;
     }
+  }
+
+  @media (max-width: 700px) {
+    overflow-y: hidden;
   }
 `;

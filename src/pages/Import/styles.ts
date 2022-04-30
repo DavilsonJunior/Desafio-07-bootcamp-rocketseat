@@ -29,6 +29,14 @@ export const Footer = styled.section`
   align-items: center;
   justify-content: space-between;
 
+  @media (max-width: 400px) {
+    flex-direction: column;
+
+    p {
+      margin-bottom: 20px;
+    }
+  }
+
   p {
     display: flex;
     align-items: center;
