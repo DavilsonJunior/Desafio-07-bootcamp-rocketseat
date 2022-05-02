@@ -109,7 +109,7 @@ describe('Dashboard', () => {
   });
 
   it('should be able to list the transactions', async () => {
-    const { getByText } = render(<App />);
+    const { getByText, debug } = render(<App />);
 
     apiMock.onGet('transactions').reply(200, {
       transactions: [
